@@ -5,4 +5,4 @@ This is a work in progress - check back soon! The final exam is on May 1st 2023.
 
 #
 
-![Screen shot](dataset-cover.jpg)
+![Screen shot](tfs_client_screen.jpg)
