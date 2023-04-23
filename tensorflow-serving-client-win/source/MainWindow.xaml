@@ -1,0 +1,191 @@
+<!-- Copyright (c) Microsoft Corporation and Contributors. -->
+<!-- Licensed under the MIT License. -->
+
+<Window
+    x:Class="tfs_client.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:tfs_client"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid HorizontalAlignment="Left" VerticalAlignment="Top" 
+          BorderBrush="Blue" BorderThickness="0" 
+          Margin="0,0,0,0">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="208"/>
+            <ColumnDefinition Width="17"/>
+            <ColumnDefinition Width="180"/>
+            <ColumnDefinition Width="5"/>
+            <ColumnDefinition Width="205"/>
+            <ColumnDefinition Width="15"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="28"/>
+            
+            <RowDefinition Height="32"/>
+            <RowDefinition Height="32"/>
+            <RowDefinition Height="32"/>
+
+            <RowDefinition Height="29"/>
+
+            <RowDefinition Height="32"/>
+            <RowDefinition Height="32"/>
+            <RowDefinition Height="32"/>
+            <RowDefinition Height="32"/>
+            <RowDefinition Height="32"/>
+            
+            <RowDefinition Height="55"/>
+            <RowDefinition Height="15"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock 
+            HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="0,0,0,2"
+            Grid.Row="0" Grid.Column="2" Text="Input features" FontSize="12" />
+        
+        <TextBlock 
+            HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,0,6"
+            Grid.Row="1" Grid.Column="0" Text="F1: Discharge Time (s)" />
+        
+        <TextBlock 
+            HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,0,6"
+            Grid.Row="2" Grid.Column="0" Text="F4: Min. Voltage Charge (V)" />
+        
+        <TextBlock 
+            HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,0,6"
+            Grid.Row="3" Grid.Column="0" Text="F7: Charging Time (s)" />
+
+        <TextBlock 
+            HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="0,0,0,2"
+            Grid.Row="4" Grid.Column="2" Text="Predictions" FontSize="12" />
+
+        <TextBlock 
+            HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,0,6"
+            Grid.Row="5" Grid.Column="0" Text="F2: Decrement 3.6-3.4V (s)" />
+
+        <TextBlock 
+            HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,0,6"
+            Grid.Row="6" Grid.Column="0" Text="F3: Max. Voltage Discharge (V)" />
+
+        <TextBlock 
+            HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,0,6"
+            Grid.Row="7" Grid.Column="0" Text="F5: Time at 4.15V (s)" />
+
+        <TextBlock 
+            HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,0,6"
+            Grid.Row="8" Grid.Column="0" Text="F6: Time Constant Current (s)" />
+
+        <TextBlock 
+            HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,0,6"
+            Grid.Row="9" Grid.Column="0" Text="Target: RUL" />
+        
+        <NumberBox 
+            x:Name="numbox_f1" HorizontalAlignment="Left" VerticalAlignment="Bottom"
+            Grid.Row="1" Grid.Column="2" Width="160" Height="30"
+            Minimum="100" Maximum="10000"
+            ValueChanged="numbox_f1_onchanged" />
+
+        <NumberBox
+            x:Name="numbox_f4" HorizontalAlignment="Left" VerticalAlignment="Bottom"
+            Grid.Row="2" Grid.Column="2" Width="160" Height="30"
+            Minimum="3" Maximum="5" 
+            ValueChanged="numbox_f4_onchanged" />
+
+        <NumberBox
+            x:Name="numbox_f7" HorizontalAlignment="Left" VerticalAlignment="Bottom"
+            Grid.Row="3" Grid.Column="2" Width="160" Height="30" 
+            Minimum="2500" Maximum="20000" 
+            ValueChanged="numbox_f7_onchanged" />
+        
+        <TextBox
+            x:Name="textbox_f2" HorizontalAlignment="Left" VerticalAlignment="Bottom" 
+            Grid.Row="5" Grid.Column="2" IsReadOnly="True"
+            Width="160" Height="30" />
+
+        <TextBox
+            x:Name="textbox_f3" HorizontalAlignment="Left" VerticalAlignment="Bottom" 
+            Grid.Row="6" Grid.Column="2" IsReadOnly="True"
+            Width="160" Height="30" />
+
+        <TextBox
+            x:Name="textbox_f5" HorizontalAlignment="Left" VerticalAlignment="Bottom" 
+            Grid.Row="7" Grid.Column="2" IsReadOnly="True"
+            Width="160" Height="30" />
+
+        <TextBox
+            x:Name="textbox_f6" HorizontalAlignment="Left" VerticalAlignment="Bottom" 
+            Grid.Row="8" Grid.Column="2" IsReadOnly="True"
+            Width="160" Height="30" />
+
+        <TextBox
+            x:Name="textbox_rul" HorizontalAlignment="Left" VerticalAlignment="Bottom" 
+            Grid.Row="9" Grid.Column="2" IsReadOnly="True"
+            Width="160" Height="30" />
+
+        <Slider
+            x:Name="slider_f1" HorizontalAlignment="Left" VerticalAlignment="Bottom"
+            Grid.Row="1" Grid.Column="4" Width="200" Margin="0,0,0,-2" 
+            Minimum="100" Maximum="10000"
+            ValueChanged="slider_f1_onchanged" />
+        
+        <Slider
+            x:Name="slider_f4" HorizontalAlignment="Left" VerticalAlignment="Bottom"
+            Grid.Row="2" Grid.Column="4" Width="200" Margin="0,0,0,-2" 
+            Minimum="3" Maximum="5" StepFrequency="0.001" 
+            ValueChanged="slider_f4_onchanged" />
+        
+        <Slider
+            x:Name="slider_f7" HorizontalAlignment="Left" VerticalAlignment="Bottom"
+            Grid.Row="3" Grid.Column="4" Width="200" Margin="0,0,0,-2" 
+            Minimum="2500" Maximum="20000"
+            ValueChanged="slider_f7_onchanged" />
+
+        <Button
+            x:Name="button_predict" 
+            Click="button_predict_click" 
+            Grid.Row="5" Grid.Column="4" Width="98"
+            HorizontalAlignment="Left" VerticalAlignment="Bottom"> 
+            Predict
+        </Button>
+
+        <Button
+            x:Name="button_clear" 
+            Click="button_clear_click" 
+            Grid.Row="5" Grid.Column="4" Width="98"
+            HorizontalAlignment="Right" VerticalAlignment="Bottom">
+            Clear
+        </Button>
+
+        <StackPanel
+            HorizontalAlignment="Right" VerticalAlignment="Bottom" Grid.ColumnSpan="3"
+            Grid.Row="10" Grid.Column="0" >
+            
+            <TextBlock x:Name="NetworkStatusMsg" HorizontalAlignment="Right" VerticalAlignment="Bottom" 
+                       Margin="0,0,20,1" Text="Initializing..." FontSize="12" />
+        </StackPanel>
+        
+        <StackPanel
+            HorizontalAlignment="Right" VerticalAlignment="Bottom"
+            Grid.RowSpan="3" Grid.ColumnSpan="2"
+            Grid.Row="9" Grid.Column="4" >
+            
+            <Image Source="/Assets/PoweredByTensorflow.jpg" Height="77" Margin="0,0,11,0"
+                   HorizontalAlignment="Right" VerticalAlignment="Bottom" />
+        </StackPanel>
+
+        <StackPanel
+            HorizontalAlignment="Center" VerticalAlignment="Top"
+            Grid.RowSpan="3" Grid.ColumnSpan="2"
+            Grid.Row="6" Grid.Column="4" >
+
+        <HyperlinkButton 
+            HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,47,0,0"
+            Content="App home page" 
+            NavigateUri="https://github.com/petr-larin/BMSTU-Graduate-Qualifying-Project/tree/main/tensorflow-serving-client-win" />
+
+        </StackPanel>
+
+    </Grid>
+
+</Window>
