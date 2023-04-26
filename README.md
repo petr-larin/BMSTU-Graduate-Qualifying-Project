@@ -10,7 +10,7 @@ In this grad project, I study the [RUL dataset](https://github.com/ignavinuales/
 
 This is the covariation matrix before and after the preprocessing:
 
-![R2 criterion](readme-images/cov_matrices.jpg)
+![Covariation matrices](readme-images/cov_matrices.jpg)
 
 This shows how classic regressors sometimes perform better than a neural network:
 
