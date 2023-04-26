@@ -20,7 +20,7 @@ This is how my app works:
 
 ###
 
-This is the Windows client app:
+This is the Windows desktop client app:
 
 ###
 
