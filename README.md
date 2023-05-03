@@ -30,3 +30,6 @@ This is a Windows desktop client for the neural network. I used Microsoft's WinU
 
 ![Screen shot](readme-images/tfs_client.jpg)
 
+###
+
+My [notebook](https://www.kaggle.com/code/peterlarin/data-cleaning-and-regressor-comparison) for this dataset on Kaggle.
