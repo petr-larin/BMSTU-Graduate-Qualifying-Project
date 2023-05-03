@@ -4,7 +4,7 @@ In this grad project, I study the [RUL dataset](https://github.com/ignavinuales/
 
 ### Results
 
-This is the covariation matrix before and after preprocessing:
+This is the covariance matrix before and after preprocessing:
 
 ![Covariation matrices](readme-images/cov_matrices.jpg)
 
