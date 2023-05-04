@@ -1,4 +1,4 @@
-## Graduate Qualifying Project for the Data Science course at BMSTU in spring 2023 (11784DS)
+## Graduate Qualifying Project for the Data Science Course at BMSTU in Spring 2023 (11784DS)
 
 In this grad project, I study the [RUL dataset](https://github.com/ignavinuales/Battery_RUL_Prediction) created by Ignacio Viñuales.
 
