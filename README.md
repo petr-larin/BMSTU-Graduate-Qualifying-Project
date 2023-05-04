@@ -24,7 +24,7 @@ This is a diagram of my dense neural network trained on the RUL dataset:
 
 ###
 
-This is a Windows desktop client for the neural network. I used Microsoft's WinUI3 framework and it is really cool. I also used the [cpr - C++ Requests library](https://docs.libcpr.org/) and C++20 [std::format](https://en.cppreference.com/w/cpp/utility/format/format) function which are both very helpful for those with Python background.
+This is a Windows desktop client for the neural network. I used Microsoft's latest [WinUI 3](https://learn.microsoft.com/en-us/windows/apps/winui/) framework and it is really cool. I also used the [cpr - C++ Requests library](https://docs.libcpr.org/) and C++20 [std::format](https://en.cppreference.com/w/cpp/utility/format/format) function which are both very helpful for those with Python background.
 
 ###
 
