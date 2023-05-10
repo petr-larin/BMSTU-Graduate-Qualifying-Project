@@ -6,13 +6,13 @@ In this grad project, I study the [RUL dataset](https://github.com/ignavinuales/
 
 This is the covariance matrix before and after preprocessing:
 
-![Covariation matrices](readme-images/cov_matrices.jpg)
+![Covariation matrices](readme-images/cov_matrices_en.jpg)
 
 This shows how classic regressors sometimes perform better than a neural network:
 
 ###
 
-![R2 criterion](readme-images/R2.jpg)
+![R2 criterion](readme-images/R2_en.jpg)
 
 ###
 
